@@ -32,6 +32,11 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
 });
 
 
+Route::view('dashboard', 'dashboard')
+    ->middleware(['auth', 'verified'])
+    ->name('dashboard');
+
+
 Route::middleware(['auth', 'role:non'])->group(function () {
 
     Route::view('/fyp', 'fyp');
