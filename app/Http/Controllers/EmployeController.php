@@ -7,9 +7,19 @@ use Illuminate\Http\Request;
 
 class EmployeController extends Controller
 {
-    public function index()
+    
+    public function index(Request $request)
     {
-        $employes = Employe::where('status', 'active')->get();
+        $search = $request->input('search');
+        
+        $employes = Employe::query()
+            ->where('status', 'active') 
+            ->where(function($query) use ($search) {
+                $query->where('first_name', 'LIKE', "%{$search}%")
+                      ->orWhere('last_name', 'LIKE', "%{$search}%")
+                      ->orWhere('position', 'LIKE', "%{$search}%");
+            })
+            ->get();
         
         return view('employes.index', compact('employes'));
     }
