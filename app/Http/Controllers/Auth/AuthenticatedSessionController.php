@@ -22,6 +22,6 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerateToken();
 
-        return redirect('/'); // Redirige al home o página de login después de cerrar sesión
+        return redirect('/');  
     }
 }

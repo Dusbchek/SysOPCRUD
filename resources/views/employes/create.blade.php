@@ -21,7 +21,7 @@
         </style>
 
         <div class="flex mx-auto mt-3 w-full justify-center items-center rounded-md">
-            <h1 class="text-center text-2xl font-bold text-red-500 mb-10">Crear Empleado</h1>
+            <h1 class="text-center text-2xl font-bold text-red-500 mb-10">Agregar Empleado</h1>
         </div>
         
         <form action="{{ route('employes.store') }}" method="POST" class="bg-neutral-800 p-6 rounded-lg shadow-md">

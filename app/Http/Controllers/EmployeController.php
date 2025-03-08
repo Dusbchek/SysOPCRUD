@@ -9,20 +9,17 @@ class EmployeController extends Controller
 {
     public function index()
     {
-        // Obtener solo los empleados cuyo 'status' sea 'active'
         $employes = Employe::where('status', 'active')->get();
         
         return view('employes.index', compact('employes'));
     }
     
 
-    // Mostrar el formulario para crear un nuevo empleado
     public function create()
     {
         return view('employes.create');
     }
 
-    // Almacenar un nuevo empleado
     public function store(Request $request)
     {
         $request->validate([
@@ -40,7 +37,6 @@ class EmployeController extends Controller
         return redirect()->route('employes.index')->with('success', 'Empleado creado exitosamente.');
     }
 
-    // Mostrar los detalles de un empleado
     public function show($id)
     {
         $employe = Employe::findOrFail($id);
@@ -53,7 +49,6 @@ class EmployeController extends Controller
         return view('employes.edit', compact('employe'));
     }
 
-    // Actualizar los datos de un empleado
     public function update(Request $request, $id)
     {
         $request->validate([
@@ -72,7 +67,6 @@ class EmployeController extends Controller
         return redirect()->route('employes.index')->with('success', 'Empleado actualizado exitosamente.');
     }
 
-    // Eliminar un empleado
     public function destroy($id)
     {
         $employe = Employe::findOrFail($id);
