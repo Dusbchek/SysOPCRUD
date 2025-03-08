@@ -62,7 +62,6 @@
 
                 <div class="flex items-center justify-center mx-auto ">
                 <a href="/login" type="button" class="mt-4 text-xl text-red-400  hover:bg-stone-900 focus:outline-none focus:ring-red-400 font-medium rounded-full  px-5 py-2.5 me-2 mb-2 ">Iniciar sesión</a>
-                           <a href="/register" type="button" class="mt-4 text-xl text-red-400  hover:bg-stone-900 focus:outline-none focus:ring-red-400 font-medium rounded-full  px-5 py-2.5 me-2 mb-2 ">Iniciar sesión</a>
 
                 </div>
             </div>
