@@ -5,20 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     @vite('resources/css/app.css')
   </head>
-  <body class="bg-neutral-950 text-white"> 
+  <body class="bg-neutral-900 text-white"> 
     <div class="container mx-auto px-4 py-6">
 
-        <style>
-            body {
-                background-color: #1a0c0c;
-                background-image: linear-gradient(to bottom, #1b1010, #0e0707);
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 100vh;
-                margin: 0;
-            }
-        </style>
+    
 
         <script>
             window.onload = function() {
